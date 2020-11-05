@@ -1,0 +1,60 @@
+        <div class="stayDateMain">
+          <div class="container">
+            <div class="stayContent">
+              <h2>{{ section.settings.title }}</h2>
+              {{ section.settings.subheading }}
+              <a href="{{ section.settings.link }}" class="readMore">{{ section.settings.btn }}</a>
+            </div>
+            <div class="stayImg">
+              {% if section.settings.img != blank %}
+              <img src="{{ section.settings.img | img_url: '480x' }}" alt="">
+              {% endif %}
+            </div>
+          </div>
+        </div>
+
+{% schema %}
+  {
+    "name": "Sign up section",
+    "settings": [
+	{
+		"type":"text",
+		"id":"title",
+		"label":"Enter Title"
+	},
+	{
+		"type":"text",
+		"id":"subheading",
+		"label":"Enter Subheading"
+	},
+	{
+		"type":"text",
+		"id":"btn",
+		"label":"Enter Button Name"
+	},
+	{
+		"type":"url",
+		"id":"link",
+		"label":"Enter URL"
+	},
+	{
+		"type":"image_picker",
+		"id":"img",
+		"label":"Select Image"
+	}
+
+],
+"presets":[
+	{
+		"name":"Sign up section",
+		"category":"New"
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

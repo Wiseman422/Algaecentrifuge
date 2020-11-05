@@ -1,0 +1,59 @@
+                      <div class="secureShipping">
+                        <div class="container">
+                          <div class="shippingIn">
+                            <div class="col">
+                              <div class="colIn">
+                                <div class="shippTitle">
+                                  {{ section.settings.heading1 }}
+                                  <span> <img src="{{ 'cat_arrow.png' | asset_url }}" alt=""> </span>
+                                </div>
+                                <div class="shippImg">
+                                  <img src="{{ 'shipp_ic.png' | asset_url }}" alt="">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="colIn">
+                                <div class="shippTitle">
+                                 {{ section.settings.heading2 }}
+                                  <span> <img src="{{ 'cat_arrow.png' | asset_url }}" alt=""> </span>
+                                </div>
+                                <div class="shippImg">
+                                  <img src="{{ 'secure_check.png' | asset_url }}" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+{% schema %}
+  {
+    "name": "Shipping Section",
+    "settings": [
+	{
+		"type":"text",
+		"id":"heading1",
+		"label":"Enter Heading"
+	},
+	{
+		"type":"text",
+		"id":"heading2",
+		"label":"Enter Heading"
+	}
+],
+"presets":[
+	{
+		"name":"Shipping Section",
+		"category":"New"
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

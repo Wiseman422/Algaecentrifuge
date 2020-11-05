@@ -1,0 +1,39 @@
+<div class="bannerMain">
+  <div class="bannerImg">
+    <video controls="controls" autoplay="autoplay" loop="">
+      <source src="https://cdn.shopify.com/s/files/1/0704/7653/files/centrifuge_oil_algae.mp4" type="video/mp4" />
+      <source src="{{ 'home-video.mov' | asset_url }}" type="video/mp4" />
+      <source src="{{ 'home-video.ogg' | asset_url }}" type="video/mp4" />
+    </video>
+  </div>
+  <div class="bannerContent">
+    <div class="bannerContentIn">
+      {{ section.settings.heading }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Banner Section",
+    "settings": [
+	{
+		"type":"image_picker",
+		"id":"img",
+		"label":"Select Image"
+	},
+	{
+		"type":"text",
+		"id":"heading",
+		"label":"Enter Heading"
+	}
+
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

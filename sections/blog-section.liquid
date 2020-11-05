@@ -1,0 +1,73 @@
+ {%- assign _lblog_blog = blogs[section.settings.lblog_blog] -%}
+ 
+
+<div data-placement_fullwidth="0"
+       id="latest_blog-1566225319813" class="product-tab-arrow-beside latest_blog_content" data-section-id="1566225319813" data-section-type="latest-blog">
+    <div class="box blog-module box-with-products box-no-advanced" data-order="1">
+      <div class="container">
+        <div class="pageTitle">
+          <h2>{{ section.settings.title }}</h2>
+          {% if section.settings.viewall %}
+          <a href="/blogs/news" class="viewAll">View all</a>
+          {% endif %}
+        </div>
+        <div class="box-content">
+          <div class="wine-news row">
+             {%- for _article in _lblog_blog.articles limit:3 -%}
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <div class="media clearfix">
+                <div class="media-body">
+                  <div class="bottom">
+                    <div class="post-title"><a href="{{_article.url}}">{{_article.title}}</a></div>
+                    <div class="date-published">Posted on {{ _article.published_at | date: "%b %d, %y" }}</div>
+                    <div class="post-description">
+									{{ _article.excerpt }}
+                    </div>
+                    <a href="{{_article.url}}" class="button-more">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                    
+
+{% schema %}
+  {
+    "name": "Blog Section",
+	"class":"blog_section",
+    "settings": [
+	{
+		"type":"text",
+		"id":"title",
+		"label":"Enter Title"
+	},
+	{
+		"type":"checkbox",
+		"id":"viewall",
+		"label":"Enable View all Button"
+	},
+	{
+          "type": "blog",
+          "id": "lblog_blog",
+          "label": "Choose a Blog"
+    }
+],
+"presets":[
+	{
+		"name":"Blog Section",
+		"category":"New"
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

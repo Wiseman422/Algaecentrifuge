@@ -1,0 +1,63 @@
+                      <div class="aboutMain">
+                        <div class="container">
+                          <div class="aboutMap">
+                            <div class='embed-container'>
+                              {{ section.settings.iframe }}
+                            </div>
+                          </div>
+                          <div class="aboutContent">
+                            <div class="pageTitle">
+                                <h2>{{ section.settings.title }}</h2>
+                            </div>
+                            {{ section.settings.content }}
+                            <a href="{{ section.settings.link }}" class="readMore">{{ section.settings.btn }}</a>
+                          </div>
+                        </div>
+                      </div>
+
+
+{% schema %}
+  {
+    "name": "About Section",
+    "settings": [
+	{
+		"type":"text",
+		"id":"iframe",
+		"label":"Enter Map Iframe"
+	},
+	{
+		"type":"text",
+		"id":"title",
+		"label":"Enter Title"
+	},
+	{
+		"type":"html",
+		"id":"content",
+		"label":"Enter Content"
+	},
+	{
+		"type":"text",
+		"id":"btn",
+		"label":"Enter Button Name"
+	},
+	{
+		"type":"url",
+		"id":"link",
+		"label":"Enter URL"
+	}
+
+],
+"presets":[
+	{
+		"name":"About Section",
+		"category":"New"
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

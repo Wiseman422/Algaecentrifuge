@@ -1,0 +1,104 @@
+        <div class="categoriesMain">
+          <div class="container">
+            <div class="catIn">
+              <div class="col">
+                <a href="{{ section.settings.link1 }}" class="colIn">
+                  <div class="catImg">
+                    <img src="{{ section.settings.img1 | img_url: '480x' }}" alt="">
+                  </div>
+                  <div class="catTitle">
+                    {{ section.settings.heading1 }}
+                    <span> <img src="{{ 'cat_arrow.png' | asset_url }}" alt=""> </span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="{{ section.settings.link2 }}" class="colIn">
+                  <div class="catImg">
+                    <img src="{{ section.settings.img2 | img_url: '480x' }}" alt="">
+                  </div>
+                  <div class="catTitle">
+                    {{ section.settings.heading2 }}
+                    <span> <img src="{{ 'cat_arrow.png' | asset_url }}" alt=""> </span>
+                  </div>
+                </a>
+              </div>
+              <div class="col">
+                <a href="{{ section.settings.link3 }}" class="colIn">
+                  <div class="catImg">
+                    <img src="{{ section.settings.img3 | img_url: '480x' }}" alt="">
+                  </div>
+                  <div class="catTitle">
+                    {{ section.settings.heading3 }}
+                    <span> <img src="{{ 'cat_arrow.png' | asset_url }}" alt=""> </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+{% schema %}
+  {
+    "name": "Collection Section",
+    "settings": [
+	{
+		"type":"text",
+		"id":"heading1",
+		"label":"Enter Heading"
+	},
+	{
+		"type":"image_picker",
+		"id":"img1",
+		"label":"Select Image"
+	},
+	{
+		"type":"url",
+		"id":"link1",
+		"label":"Enter Link"
+	},
+	{
+		"type":"text",
+		"id":"heading2",
+		"label":"Enter Heading"
+	},
+	{
+		"type":"image_picker",
+		"id":"img2",
+		"label":"Select Image"
+	},
+	{
+		"type":"url",
+		"id":"link2",
+		"label":"Enter Link"
+	},
+	{
+		"type":"text",
+		"id":"heading3",
+		"label":"Enter Heading"
+	},
+	{
+		"type":"image_picker",
+		"id":"img3",
+		"label":"Select Image"
+	},
+	{
+		"type":"url",
+		"id":"link3",
+		"label":"Enter Link"
+	}
+],
+"presets":[
+	{
+		"name":"Collection Section",
+		"category":"New"
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
